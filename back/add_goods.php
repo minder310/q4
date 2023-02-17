@@ -36,7 +36,7 @@
     </tr>
     <tr>
         <td class="ct tt">商品介紹</td>
-        <td class="pp"><input type="text" name="intro" id="intro"></td>
+        <td class="pp"><textarea name="" id="" cols="30" rows="10"></textarea></td>
     </tr>
 </table>
 <script>
@@ -44,9 +44,12 @@
     getBigs()
     // 
     function getBigs(){
+                                //回傳訊息的意思。 
         $.get("./api/get_bigs.php",(bigs)=>{
             // .的意思是只能執行jq原來的指令。
             $("big").html(bigs)
+            // 選擇器JQ選擇器，寫法。
+            $(`#big option[value=${goods.big}']`).prop('selected',true);
             // 另外寫的函數，必須寫在另外一行。
             getMids()
         })
