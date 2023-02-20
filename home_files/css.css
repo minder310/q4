@@ -101,6 +101,8 @@ input[type=text],input[type=password]
 .s
 {
 	display:none;
+	background-color: lightgreen;
+	margin-left: 30px;
 }
 div.ww:hover > div.s
 {
